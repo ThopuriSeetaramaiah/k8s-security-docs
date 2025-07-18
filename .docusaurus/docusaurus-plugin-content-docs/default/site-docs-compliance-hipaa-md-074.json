@@ -1,0 +1,27 @@
+{
+  "id": "compliance/hipaa",
+  "title": "HIPAA Compliance",
+  "description": "The Health Insurance Portability and Accountability Act (HIPAA) establishes standards for protecting sensitive patient health information. Organizations that handle protected health information (PHI) must ensure their systems comply with HIPAA regulations.",
+  "source": "@site/docs/compliance/hipaa.md",
+  "sourceDirName": "compliance",
+  "slug": "/compliance/hipaa",
+  "permalink": "/docs/compliance/hipaa",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/docs/compliance/hipaa.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PCI DSS Compliance",
+    "permalink": "/docs/compliance/pci-dss"
+  },
+  "next": {
+    "title": "Frequently Asked Questions",
+    "permalink": "/docs/faq"
+  }
+}

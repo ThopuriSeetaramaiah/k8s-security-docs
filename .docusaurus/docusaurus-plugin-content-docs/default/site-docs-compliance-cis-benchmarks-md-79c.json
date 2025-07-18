@@ -1,0 +1,27 @@
+{
+  "id": "compliance/cis-benchmarks",
+  "title": "CIS Benchmarks",
+  "description": "The Center for Internet Security (CIS) Benchmarks are industry-standard configuration baselines that help organizations secure their systems against today's evolving cyber threats.",
+  "source": "@site/docs/compliance/cis-benchmarks.md",
+  "sourceDirName": "compliance",
+  "slug": "/compliance/cis-benchmarks",
+  "permalink": "/docs/compliance/cis-benchmarks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/docs/compliance/cis-benchmarks.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "kube-hunter",
+    "permalink": "/docs/security-tools/kube-hunter"
+  },
+  "next": {
+    "title": "PCI DSS Compliance",
+    "permalink": "/docs/compliance/pci-dss"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "faq",
+  "title": "Frequently Asked Questions",
+  "description": "General Kubernetes Security",
+  "source": "@site/docs/faq.md",
+  "sourceDirName": ".",
+  "slug": "/faq",
+  "permalink": "/docs/faq",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/docs/faq.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HIPAA Compliance",
+    "permalink": "/docs/compliance/hipaa"
+  }
+}

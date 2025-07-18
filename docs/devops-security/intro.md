@@ -176,7 +176,7 @@ deny[msg] {
 
 Explore our detailed guides on implementing specific DevSecOps practices:
 
-1. [Setting Up Secure CI/CD Pipelines](devops-security/secure-cicd)
-2. [Infrastructure as Code Security](devops-security/iac-security)
-3. [Container Security in DevOps](devops-security/container-security)
-4. [Secret Management](devops-security/secret-management)
+1. Setting Up Secure CI/CD Pipelines
+2. Infrastructure as Code Security
+3. Container Security in DevOps
+4. Secret Management

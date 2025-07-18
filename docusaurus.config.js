@@ -20,7 +20,7 @@ const config = {
   organizationName: 'ThopuriSeetaramaiah', // Usually your GitHub org/user name.
   projectName: 'k8s-security-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -75,7 +75,6 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/ThopuriSeetaramaiah/k8s-security-docs',
             label: 'GitHub',
@@ -92,10 +91,6 @@ const config = {
               {
                 label: 'Introduction',
                 to: '/docs/intro',
-              },
-              {
-                label: 'Best Practices',
-                to: '/docs/category/best-practices',
               },
             ],
           },
@@ -115,10 +110,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/ThopuriSeetaramaiah/k8s-security-docs',

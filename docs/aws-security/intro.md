@@ -34,9 +34,9 @@ This AWS security documentation covers:
 
 To begin securing your AWS environment:
 
-1. Start with the [AWS Security Foundations](aws-security/foundations) guide
-2. Implement the [IAM Best Practices](aws-security/iam-best-practices)
-3. Set up [Security Monitoring](aws-security/security-monitoring) for your AWS accounts
+1. Start with the [AWS Security Foundations](foundations) guide
+2. Implement the [IAM Best Practices](iam-best-practices)
+3. Set up Security Monitoring for your AWS accounts
 4. Explore service-specific security recommendations
 
 Let's work together to build secure and compliant AWS environments!

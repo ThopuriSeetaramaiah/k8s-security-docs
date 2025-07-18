@@ -1,0 +1,27 @@
+{
+  "id": "security-tools/trivy",
+  "title": "Trivy",
+  "description": "Trivy is a comprehensive and versatile security scanner. It detects vulnerabilities in container images, file systems, git repositories, and more.",
+  "source": "@site/docs/security-tools/trivy.md",
+  "sourceDirName": "security-tools",
+  "slug": "/security-tools/trivy",
+  "permalink": "/docs/security-tools/trivy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/docs/security-tools/trivy.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "kube-bench",
+    "permalink": "/docs/security-tools/kube-bench"
+  },
+  "next": {
+    "title": "Falco",
+    "permalink": "/docs/security-tools/falco"
+  }
+}

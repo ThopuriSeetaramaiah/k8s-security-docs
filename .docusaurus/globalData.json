@@ -1,0 +1,123 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "aws-security/foundations",
+              "path": "/docs/aws-security/foundations",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aws-security/iam-best-practices",
+              "path": "/docs/aws-security/iam-best-practices",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aws-security/intro",
+              "path": "/docs/aws-security/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "best-practices/cluster-security",
+              "path": "/docs/best-practices/cluster-security",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "best-practices/network-policies",
+              "path": "/docs/best-practices/network-policies",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "best-practices/pod-security",
+              "path": "/docs/best-practices/pod-security",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "best-practices/rbac",
+              "path": "/docs/best-practices/rbac",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "compliance/cis-benchmarks",
+              "path": "/docs/compliance/cis-benchmarks",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "compliance/hipaa",
+              "path": "/docs/compliance/hipaa",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "compliance/pci-dss",
+              "path": "/docs/compliance/pci-dss",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "devops-security/intro",
+              "path": "/docs/devops-security/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "faq",
+              "path": "/docs/faq",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/installation",
+              "path": "/docs/getting-started/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/quick-start",
+              "path": "/docs/getting-started/quick-start",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "security-tools/falco",
+              "path": "/docs/security-tools/falco",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "security-tools/kube-bench",
+              "path": "/docs/security-tools/kube-bench",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "security-tools/kube-hunter",
+              "path": "/docs/security-tools/kube-hunter",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "security-tools/trivy",
+              "path": "/docs/security-tools/trivy",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}
