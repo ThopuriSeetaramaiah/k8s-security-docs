@@ -7,7 +7,7 @@ hide_table_of_contents: true
 # Security Newsletter
 
 Stay up-to-date with the latest security news, best practices, and tips for AWS, DevOps, and Kubernetes.
-Subscribe to receive our monthly newsletter directly in your inbox.
+Subscribe to receive our weekly newsletter directly in your inbox.
 
 ## Subscribe
 
@@ -35,6 +35,17 @@ Subscribe to receive our monthly newsletter directly in your inbox.
 <div class="container">
   <div class="row">
     <div class="col col--12">
+      <div class="card margin-bottom--md">
+        <div class="card__body">
+          <h3>Security Newsletter - Week of July 25, 2025</h3>
+          <p><em>July 25, 2025</em></p>
+          <p>Weekly security task: Implement AWS IAM Access Analyzer. Plus updates on Amazon Inspector, Kubernetes vulnerabilities, and DevOps security best practices.</p>
+        </div>
+        <div class="card__footer">
+          <a href="/blog/security-newsletter-2" class="button button--primary button--sm">Read Newsletter</a>
+        </div>
+      </div>
+      
       <div class="card margin-bottom--md">
         <div class="card__body">
           <h3>Security Newsletter - July 2025</h3>

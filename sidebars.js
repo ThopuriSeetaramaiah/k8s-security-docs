@@ -23,6 +23,7 @@ const sidebars = {
         'aws-security/intro',
         'aws-security/foundations',
         'aws-security/iam-best-practices',
+        'aws-security/access-analyzer',
       ],
     },
     {
