@@ -12,7 +12,7 @@ fi
 
 # Deploy to GitHub Pages
 echo "Deploying to GitHub Pages..."
-GIT_USER=ThopuriSeetaramaiah USE_SSH=true npm run deploy
+GIT_USER=ThopuriSeetaramaiah USE_SSH=false npm run deploy
 
 echo "Deployment complete!"
 echo "Your site will be available at: https://security.techdevops.co.uk"
