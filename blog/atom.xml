@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://security.techdevops.co.uk/blog</id>
+    <title>AWS &amp; Kubernetes Security Guide Blog</title>
+    <updated>2025-07-18T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://security.techdevops.co.uk/blog"/>
+    <subtitle>AWS &amp; Kubernetes Security Guide Blog</subtitle>
+    <icon>https://security.techdevops.co.uk/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Security Newsletter - July 2025]]></title>
+        <id>https://security.techdevops.co.uk/blog/security-newsletter-1</id>
+        <link href="https://security.techdevops.co.uk/blog/security-newsletter-1"/>
+        <updated>2025-07-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the first edition of our AWS & Kubernetes Security Newsletter! In this monthly update, we'll cover the latest security developments, best practices, and tips for securing your cloud and container environments.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the first edition of our AWS &amp; Kubernetes Security Newsletter! In this monthly update, we'll cover the latest security developments, best practices, and tips for securing your cloud and container environments.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="latest-security-vulnerabilities">Latest Security Vulnerabilities<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#latest-security-vulnerabilities" class="hash-link" aria-label="Direct link to Latest Security Vulnerabilities" title="Direct link to Latest Security Vulnerabilities">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="critical-kubernetes-vulnerability-patched">Critical Kubernetes Vulnerability Patched<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#critical-kubernetes-vulnerability-patched" class="hash-link" aria-label="Direct link to Critical Kubernetes Vulnerability Patched" title="Direct link to Critical Kubernetes Vulnerability Patched">​</a></h3>
+<p>A critical vulnerability in Kubernetes API server was patched this month. The vulnerability (CVE-2025-XXXX) could allow attackers to escalate privileges in certain configurations. Make sure to update your clusters to the latest version.</p>
+<p><strong>Affected versions:</strong> 1.28.x, 1.29.x
+<strong>Patched versions:</strong> 1.28.15, 1.29.10</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aws-iam-updates">AWS IAM Updates<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#aws-iam-updates" class="hash-link" aria-label="Direct link to AWS IAM Updates" title="Direct link to AWS IAM Updates">​</a></h3>
+<p>AWS has introduced new security features for IAM, including enhanced anomaly detection and more granular permission boundaries. These features help prevent privilege escalation and detect unusual access patterns.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-best-practice-of-the-month">Security Best Practice of the Month<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#security-best-practice-of-the-month" class="hash-link" aria-label="Direct link to Security Best Practice of the Month" title="Direct link to Security Best Practice of the Month">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="implementing-pod-security-standards">Implementing Pod Security Standards<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#implementing-pod-security-standards" class="hash-link" aria-label="Direct link to Implementing Pod Security Standards" title="Direct link to Implementing Pod Security Standards">​</a></h3>
+<p>Kubernetes Pod Security Standards provide a structured way to secure your workloads. Here's a quick implementation guide:</p>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">apiVersion</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> v1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">kind</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> Namespace</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">metadata</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> secure</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">workloads</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">labels</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">pod-security.kubernetes.io/enforce</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> restricted</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">pod-security.kubernetes.io/audit</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> restricted</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">pod-security.kubernetes.io/warn</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> restricted</span><br></span></code></pre></div></div>
+<p>By applying these labels to your namespaces, you enforce the "restricted" policy which prevents pods from running with dangerous capabilities.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tool-spotlight-trivy">Tool Spotlight: Trivy<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#tool-spotlight-trivy" class="hash-link" aria-label="Direct link to Tool Spotlight: Trivy" title="Direct link to Tool Spotlight: Trivy">​</a></h2>
+<p><a href="https://github.com/aquasecurity/trivy" target="_blank" rel="noopener noreferrer">Trivy</a> is an excellent open-source vulnerability scanner for containers and Kubernetes. It can scan:</p>
+<ul>
+<li>Container images</li>
+<li>Filesystem</li>
+<li>Git repositories</li>
+<li>Kubernetes manifests</li>
+</ul>
+<p>Basic usage:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Scan a container image</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">trivy image nginx:latest</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Scan Kubernetes manifests</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">trivy config ./kubernetes-manifests/</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="upcoming-security-events">Upcoming Security Events<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#upcoming-security-events" class="hash-link" aria-label="Direct link to Upcoming Security Events" title="Direct link to Upcoming Security Events">​</a></h2>
+<ul>
+<li><strong>AWS re<!-- -->:Inforce</strong> - Virtual event on August 15, 2025</li>
+<li><strong>KubeCon + CloudNativeCon</strong> - San Francisco, September 22-26, 2025</li>
+<li><strong>DevSecOps Summit</strong> - Online, July 30, 2025</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="subscribe-to-our-newsletter">Subscribe to Our Newsletter<a href="https://security.techdevops.co.uk/blog/security-newsletter-1#subscribe-to-our-newsletter" class="hash-link" aria-label="Direct link to Subscribe to Our Newsletter" title="Direct link to Subscribe to Our Newsletter">​</a></h2>
+<p>Want to receive these updates directly in your inbox? <a href="https://security.techdevops.co.uk/blog/security-newsletter-1#">Subscribe to our newsletter</a> to stay informed about the latest security developments.</p>
+<hr>
+<p><em>This newsletter is for informational purposes only and does not constitute professional advice. Always test security measures in a controlled environment before implementing in production.</em></p>]]></content>
+        <author>
+            <name>Seetaramaiah Thopuri</name>
+            <uri>https://github.com/ThopuriSeetaramaiah</uri>
+        </author>
+        <category label="aws" term="aws"/>
+        <category label="kubernetes" term="kubernetes"/>
+        <category label="security" term="security"/>
+        <category label="newsletter" term="newsletter"/>
+    </entry>
+</feed>
