@@ -31,7 +31,9 @@ export default {
         },
         "blog": {
           "showReadingTime": true,
-          "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/"
+          "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/",
+          "path": "./blog",
+          "routeBasePath": "blog"
         },
         "theme": {
           "customCss": "/Users/seetaramaiahthopuri/k8s-docs-site/src/css/custom.css"
@@ -53,6 +55,21 @@ export default {
           "sidebarId": "tutorialSidebar",
           "position": "left",
           "label": "Documentation"
+        },
+        {
+          "to": "/blog/",
+          "label": "Blog",
+          "position": "left"
+        },
+        {
+          "to": "/newsletter/",
+          "label": "Newsletter",
+          "position": "left"
+        },
+        {
+          "to": "/test/",
+          "label": "Test Page",
+          "position": "left"
         },
         {
           "href": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs",
