@@ -3,6 +3,51 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/blog',
+    component: ComponentCreator('/blog', '28c'),
+    exact: true
+  },
+  {
+    path: '/blog/archive',
+    component: ComponentCreator('/blog/archive', '182'),
+    exact: true
+  },
+  {
+    path: '/blog/security-newsletter-1',
+    component: ComponentCreator('/blog/security-newsletter-1', '388'),
+    exact: true
+  },
+  {
+    path: '/blog/tags',
+    component: ComponentCreator('/blog/tags', '287'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/aws',
+    component: ComponentCreator('/blog/tags/aws', '64c'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/kubernetes',
+    component: ComponentCreator('/blog/tags/kubernetes', '922'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/newsletter',
+    component: ComponentCreator('/blog/tags/newsletter', 'c83'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/security',
+    component: ComponentCreator('/blog/tags/security', '1ea'),
+    exact: true
+  },
+  {
+    path: '/newsletter',
+    component: ComponentCreator('/newsletter', '264'),
+    exact: true
+  },
+  {
     path: '/docs',
     component: ComponentCreator('/docs', 'e59'),
     routes: [

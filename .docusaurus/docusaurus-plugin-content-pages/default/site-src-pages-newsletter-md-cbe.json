@@ -1,0 +1,13 @@
+{
+  "type": "mdx",
+  "permalink": "/newsletter",
+  "source": "@site/src/pages/newsletter.md",
+  "title": "Security Newsletter",
+  "description": "Subscribe to our AWS, DevOps, and Kubernetes security newsletter",
+  "frontMatter": {
+    "title": "Security Newsletter",
+    "description": "Subscribe to our AWS, DevOps, and Kubernetes security newsletter",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

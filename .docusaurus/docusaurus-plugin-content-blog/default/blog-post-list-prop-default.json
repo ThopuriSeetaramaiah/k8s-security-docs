@@ -1,4 +1,11 @@
 {
   "title": "Recent posts",
-  "items": []
+  "items": [
+    {
+      "title": "Security Newsletter - July 2025",
+      "permalink": "/blog/security-newsletter-1",
+      "unlisted": false,
+      "date": "2025-07-18T00:00:00.000Z"
+    }
+  ]
 }

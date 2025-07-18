@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/security-newsletter-1",
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/blog/2025-07-18-security-newsletter-1.md",
+  "source": "@site/blog/2025-07-18-security-newsletter-1.md",
+  "title": "Security Newsletter - July 2025",
+  "description": "Welcome to the first edition of our AWS & Kubernetes Security Newsletter! In this monthly update, we'll cover the latest security developments, best practices, and tips for securing your cloud and container environments.",
+  "date": "2025-07-18T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "aws",
+      "permalink": "/blog/tags/aws"
+    },
+    {
+      "inline": true,
+      "label": "kubernetes",
+      "permalink": "/blog/tags/kubernetes"
+    },
+    {
+      "inline": true,
+      "label": "security",
+      "permalink": "/blog/tags/security"
+    },
+    {
+      "inline": true,
+      "label": "newsletter",
+      "permalink": "/blog/tags/newsletter"
+    }
+  ],
+  "readingTime": 1.53,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Seetaramaiah Thopuri",
+      "title": "Security Specialist",
+      "url": "https://github.com/ThopuriSeetaramaiah",
+      "image_url": "https://github.com/ThopuriSeetaramaiah.png",
+      "imageURL": "https://github.com/ThopuriSeetaramaiah.png",
+      "socials": {},
+      "key": null,
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "slug": "security-newsletter-1",
+    "title": "Security Newsletter - July 2025",
+    "authors": {
+      "name": "Seetaramaiah Thopuri",
+      "title": "Security Specialist",
+      "url": "https://github.com/ThopuriSeetaramaiah",
+      "image_url": "https://github.com/ThopuriSeetaramaiah.png",
+      "imageURL": "https://github.com/ThopuriSeetaramaiah.png"
+    },
+    "tags": [
+      "aws",
+      "kubernetes",
+      "security",
+      "newsletter"
+    ]
+  },
+  "unlisted": false
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkk8s_security_docs=self.webpackChunkk8s_security_docs||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Security Newsletter - July 2025","permalink":"/blog/security-newsletter-1","unlisted":false,"date":"2025-07-18T00:00:00.000Z"}]}')}}]);
