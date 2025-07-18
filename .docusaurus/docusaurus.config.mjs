@@ -67,11 +67,6 @@ export default {
           "position": "left"
         },
         {
-          "to": "/test/",
-          "label": "Test Page",
-          "position": "left"
-        },
-        {
           "href": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs",
           "label": "GitHub",
           "position": "right"

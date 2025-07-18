@@ -35,6 +35,15 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'AI Tools',
+      items: [
+        'ai/intro',
+        'ai/aws-support-mcp',
+        'ai/amazon-q-developer',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Getting Started',
       items: ['getting-started/installation', 'getting-started/quick-start'],
     },
