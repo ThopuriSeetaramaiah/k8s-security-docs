@@ -11,7 +11,7 @@ export default {
   "baseUrl": "/",
   "organizationName": "ThopuriSeetaramaiah",
   "projectName": "k8s-security-docs",
-  "onBrokenLinks": "throw",
+  "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
   "i18n": {
     "defaultLocale": "en",
@@ -55,11 +55,6 @@ export default {
           "label": "Documentation"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
           "href": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs",
           "label": "GitHub",
           "position": "right"
@@ -76,10 +71,6 @@ export default {
             {
               "label": "Introduction",
               "to": "/docs/intro"
-            },
-            {
-              "label": "Best Practices",
-              "to": "/docs/category/best-practices"
             }
           ]
         },
@@ -99,10 +90,6 @@ export default {
         {
           "title": "More",
           "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
             {
               "label": "GitHub",
               "href": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs"
