@@ -20,6 +20,12 @@ function HomepageHeader() {
             to="/docs/intro">
             Get Started with K8s Security
           </Link>
+          <Link
+            className="button button--primary button--lg"
+            style={{marginLeft: '10px'}}
+            to="/newsletter/">
+            Subscribe to Newsletter
+          </Link>
         </div>
       </div>
     </header>

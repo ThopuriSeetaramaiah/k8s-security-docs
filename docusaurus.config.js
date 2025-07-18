@@ -49,6 +49,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/',
+          path: './blog',
+          routeBasePath: 'blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -75,6 +77,9 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {to: '/blog/', label: 'Blog', position: 'left'},
+          {to: '/newsletter/', label: 'Newsletter', position: 'left'},
+          {to: '/test/', label: 'Test Page', position: 'left'},
           {
             href: 'https://github.com/ThopuriSeetaramaiah/k8s-security-docs',
             label: 'GitHub',

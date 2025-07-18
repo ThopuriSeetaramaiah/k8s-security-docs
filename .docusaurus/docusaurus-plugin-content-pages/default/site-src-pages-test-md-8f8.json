@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/test",
+  "source": "@site/src/pages/test.md",
+  "title": "Test Page",
+  "description": "A simple test page",
+  "frontMatter": {
+    "title": "Test Page",
+    "description": "A simple test page"
+  },
+  "unlisted": false
+}
