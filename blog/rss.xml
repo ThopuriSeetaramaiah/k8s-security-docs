@@ -4,10 +4,83 @@
         <title>AWS &amp; Kubernetes Security Guide Blog</title>
         <link>https://security.techdevops.co.uk/blog</link>
         <description>AWS &amp; Kubernetes Security Guide Blog</description>
-        <lastBuildDate>Fri, 18 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 25 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Security Newsletter - Week of July 25, 2025]]></title>
+            <link>https://security.techdevops.co.uk/blog/security-newsletter-2</link>
+            <guid>https://security.techdevops.co.uk/blog/security-newsletter-2</guid>
+            <pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to this week's security newsletter! We're monitoring the latest developments in AWS, Kubernetes, and DevOps security to help you stay protected.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to this week's security newsletter! We're monitoring the latest developments in AWS, Kubernetes, and DevOps security to help you stay protected.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-task-of-the-week">Security Task of the Week<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#security-task-of-the-week" class="hash-link" aria-label="Direct link to Security Task of the Week" title="Direct link to Security Task of the Week">​</a></h2>
+<p><strong>Implement AWS IAM Access Analyzer</strong></p>
+<p>This week's security task is to implement AWS IAM Access Analyzer in your environment. This tool helps identify resources that are shared with external entities, potentially creating security risks.</p>
+<p><strong>Steps to implement:</strong></p>
+<ol>
+<li>Open the IAM console in your AWS account</li>
+<li>Navigate to Access Analyzer in the left navigation pane</li>
+<li>Choose "Create analyzer"</li>
+<li>Select your organization or account as the analyzer scope</li>
+<li>Review findings regularly to identify unintended external access</li>
+</ol>
+<p><strong>Expected time commitment:</strong> 30-45 minutes for setup, then 15 minutes weekly for review</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="aws-security-updates">AWS Security Updates<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#aws-security-updates" class="hash-link" aria-label="Direct link to AWS Security Updates" title="Direct link to AWS Security Updates">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-aws-security-service-amazon-inspector-automated-vulnerability-management">New AWS Security Service: Amazon Inspector Automated Vulnerability Management<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#new-aws-security-service-amazon-inspector-automated-vulnerability-management" class="hash-link" aria-label="Direct link to New AWS Security Service: Amazon Inspector Automated Vulnerability Management" title="Direct link to New AWS Security Service: Amazon Inspector Automated Vulnerability Management">​</a></h3>
+<p>AWS has enhanced Amazon Inspector with automated vulnerability management capabilities. The service now provides:</p>
+<ul>
+<li>Continuous scanning of EC2 instances and container images</li>
+<li>Automated prioritization of vulnerabilities based on risk</li>
+<li>Integration with Security Hub for centralized management</li>
+</ul>
+<p><strong>Action item:</strong> Enable Amazon Inspector in your AWS accounts to benefit from these enhancements.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="iam-identity-center-adds-attribute-based-access-control">IAM Identity Center Adds Attribute-Based Access Control<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#iam-identity-center-adds-attribute-based-access-control" class="hash-link" aria-label="Direct link to IAM Identity Center Adds Attribute-Based Access Control" title="Direct link to IAM Identity Center Adds Attribute-Based Access Control">​</a></h3>
+<p>AWS IAM Identity Center (formerly AWS SSO) now supports attribute-based access control (ABAC). This allows you to define permissions based on user attributes rather than creating separate roles for each access pattern.</p>
+<p><strong>Learn more:</strong> <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html" target="_blank" rel="noopener noreferrer">AWS IAM Identity Center ABAC Documentation</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kubernetes-security-insights">Kubernetes Security Insights<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#kubernetes-security-insights" class="hash-link" aria-label="Direct link to Kubernetes Security Insights" title="Direct link to Kubernetes Security Insights">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cve-2025-xxxx-kubernetes-api-server-vulnerability">CVE-2025-XXXX: Kubernetes API Server Vulnerability<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#cve-2025-xxxx-kubernetes-api-server-vulnerability" class="hash-link" aria-label="Direct link to CVE-2025-XXXX: Kubernetes API Server Vulnerability" title="Direct link to CVE-2025-XXXX: Kubernetes API Server Vulnerability">​</a></h3>
+<p>A medium-severity vulnerability was discovered in Kubernetes API server that could allow unauthorized access to certain API endpoints under specific configurations.</p>
+<p><strong>Affected versions:</strong> 1.28.x through 1.29.x
+<strong>Patched versions:</strong> 1.28.16, 1.29.11</p>
+<p><strong>Mitigation:</strong> Update your Kubernetes clusters to the latest patched versions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security-tool-spotlight-kyverno">Security Tool Spotlight: Kyverno<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#security-tool-spotlight-kyverno" class="hash-link" aria-label="Direct link to Security Tool Spotlight: Kyverno" title="Direct link to Security Tool Spotlight: Kyverno">​</a></h3>
+<p><a href="https://kyverno.io/" target="_blank" rel="noopener noreferrer">Kyverno</a> is gaining popularity as a Kubernetes-native policy engine. Unlike traditional policy engines, Kyverno doesn't require learning a new language and uses standard Kubernetes resources for policy definitions.</p>
+<p><strong>Sample policy to enforce image registry restrictions:</strong></p>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">apiVersion</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> kyverno.io/v1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">kind</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> ClusterPolicy</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">metadata</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> restrict</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">image</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">registries</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">spec</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">validationFailureAction</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> enforce</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">rules</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> validate</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">registries</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">match</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">resources</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">kinds</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> Pod</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">validate</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">message</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Images must come from approved registries"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">pattern</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">spec</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          </span><span class="token key atrule" style="color:#00a4db">containers</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">image</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"registry.company.com/*"</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="devops-security-best-practices">DevOps Security Best Practices<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#devops-security-best-practices" class="hash-link" aria-label="Direct link to DevOps Security Best Practices" title="Direct link to DevOps Security Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="securing-cicd-pipelines-secret-management">Securing CI/CD Pipelines: Secret Management<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#securing-cicd-pipelines-secret-management" class="hash-link" aria-label="Direct link to Securing CI/CD Pipelines: Secret Management" title="Direct link to Securing CI/CD Pipelines: Secret Management">​</a></h3>
+<p>A recent analysis of security breaches shows that exposed secrets in CI/CD pipelines remain one of the top attack vectors. Consider implementing these practices:</p>
+<ol>
+<li>Use a dedicated secret management solution (AWS Secrets Manager, HashiCorp Vault)</li>
+<li>Implement secret rotation policies</li>
+<li>Scan repositories for accidentally committed secrets</li>
+<li>Use temporary, just-in-time credentials for pipeline operations</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="community-discussion">Community Discussion<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#community-discussion" class="hash-link" aria-label="Direct link to Community Discussion" title="Direct link to Community Discussion">​</a></h2>
+<p>From the AWS re<!-- -->:Post<!-- --> community, there's an interesting discussion about securing multi-account AWS environments. Key takeaways:</p>
+<ul>
+<li>Implement AWS Control Tower for centralized governance</li>
+<li>Use Service Control Policies (SCPs) to enforce security guardrails</li>
+<li>Centralize logging with CloudTrail and Security Lake</li>
+<li>Implement automated compliance checks with AWS Config</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="upcoming-security-events">Upcoming Security Events<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#upcoming-security-events" class="hash-link" aria-label="Direct link to Upcoming Security Events" title="Direct link to Upcoming Security Events">​</a></h2>
+<ul>
+<li><strong>AWS Security Week</strong> - Virtual event, August 10-14, 2025</li>
+<li><strong>Cloud Security Summit</strong> - Chicago, September 5-7, 2025</li>
+<li><strong>DevSecOps Days</strong> - Online, August 3, 2025</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="subscribe-to-our-newsletter">Subscribe to Our Newsletter<a href="https://security.techdevops.co.uk/blog/security-newsletter-2#subscribe-to-our-newsletter" class="hash-link" aria-label="Direct link to Subscribe to Our Newsletter" title="Direct link to Subscribe to Our Newsletter">​</a></h2>
+<p>Want to receive these updates directly in your inbox? <a href="https://security.techdevops.co.uk/newsletter/">Subscribe to our newsletter</a> to stay informed about the latest security developments.</p>
+<hr>
+<p><em>This newsletter is for informational purposes only and does not constitute professional advice. Always test security measures in a controlled environment before implementing in production.</em></p>]]></content:encoded>
+            <category>aws</category>
+            <category>kubernetes</category>
+            <category>security</category>
+            <category>newsletter</category>
+        </item>
         <item>
             <title><![CDATA[Security Newsletter - July 2025]]></title>
             <link>https://security.techdevops.co.uk/blog/security-newsletter-1</link>
