@@ -11,6 +11,11 @@
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "aws-security/access-analyzer",
+              "path": "/docs/aws-security/access-analyzer",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "aws-security/foundations",
               "path": "/docs/aws-security/foundations",
               "sidebar": "tutorialSidebar"

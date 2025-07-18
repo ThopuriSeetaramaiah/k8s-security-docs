@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/security-newsletter-2",
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/blog/2025-07-25-security-newsletter-2.md",
+  "source": "@site/blog/2025-07-25-security-newsletter-2.md",
+  "title": "Security Newsletter - Week of July 25, 2025",
+  "description": "Welcome to this week's security newsletter! We're monitoring the latest developments in AWS, Kubernetes, and DevOps security to help you stay protected.",
+  "date": "2025-07-25T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "aws",
+      "permalink": "/blog/tags/aws"
+    },
+    {
+      "inline": true,
+      "label": "kubernetes",
+      "permalink": "/blog/tags/kubernetes"
+    },
+    {
+      "inline": true,
+      "label": "security",
+      "permalink": "/blog/tags/security"
+    },
+    {
+      "inline": true,
+      "label": "newsletter",
+      "permalink": "/blog/tags/newsletter"
+    }
+  ],
+  "readingTime": 2.82,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Seetaramaiah Thopuri",
+      "title": "Security Specialist",
+      "url": "https://github.com/ThopuriSeetaramaiah",
+      "socials": {},
+      "key": null,
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "slug": "security-newsletter-2",
+    "title": "Security Newsletter - Week of July 25, 2025",
+    "authors": {
+      "name": "Seetaramaiah Thopuri",
+      "title": "Security Specialist",
+      "url": "https://github.com/ThopuriSeetaramaiah"
+    },
+    "tags": [
+      "aws",
+      "kubernetes",
+      "security",
+      "newsletter"
+    ]
+  },
+  "unlisted": false,
+  "nextItem": {
+    "title": "Security Newsletter - July 2025",
+    "permalink": "/blog/security-newsletter-1"
+  }
+}

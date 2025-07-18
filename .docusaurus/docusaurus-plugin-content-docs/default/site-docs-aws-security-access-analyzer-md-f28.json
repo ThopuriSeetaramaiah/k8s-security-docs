@@ -1,0 +1,27 @@
+{
+  "id": "aws-security/access-analyzer",
+  "title": "IAM Access Analyzer",
+  "description": "AWS IAM Access Analyzer is a powerful security tool that helps identify resources in your organization and accounts that are shared with an external entity. This helps you identify unintended access to your resources and data, which is a security risk.",
+  "source": "@site/docs/aws-security/access-analyzer.md",
+  "sourceDirName": "aws-security",
+  "slug": "/aws-security/access-analyzer",
+  "permalink": "/docs/aws-security/access-analyzer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ThopuriSeetaramaiah/k8s-security-docs/tree/main/docs/aws-security/access-analyzer.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "IAM Best Practices",
+    "permalink": "/docs/aws-security/iam-best-practices"
+  },
+  "next": {
+    "title": "DevSecOps Introduction",
+    "permalink": "/docs/devops-security/intro"
+  }
+}

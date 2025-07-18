@@ -1,11 +1,14 @@
 {
-  "/blog-28c": {
+  "/blog-d91": {
     "__comp": "a6aa9e1f",
     "__context": {
       "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
+      {
+        "content": "0010ff4c"
+      },
       {
         "content": "95bff33a"
       }
@@ -30,6 +33,17 @@
     "sidebar": "814f3328",
     "content": "457e4547"
   },
+  "/blog/security-newsletter-2-97c": {
+    "__comp": "ccc49370",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "content": "f6df2fe6"
+  },
   "/blog/tags-287": {
     "__comp": "01a85c17",
     "__context": {
@@ -38,33 +52,39 @@
     "sidebar": "814f3328",
     "__props": "3a2db09e"
   },
-  "/blog/tags/aws-64c": {
+  "/blog/tags/aws-d02": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
+      {
+        "content": "0010ff4c"
+      },
       {
         "content": "95bff33a"
       }
     ],
     "__props": "13ab27aa"
   },
-  "/blog/tags/kubernetes-922": {
+  "/blog/tags/kubernetes-23e": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
+      {
+        "content": "0010ff4c"
+      },
       {
         "content": "95bff33a"
       }
     ],
     "__props": "25d1f3de"
   },
-  "/blog/tags/newsletter-c83": {
+  "/blog/tags/newsletter-060": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
@@ -72,18 +92,24 @@
     "sidebar": "814f3328",
     "items": [
       {
+        "content": "0010ff4c"
+      },
+      {
         "content": "95bff33a"
       }
     ],
     "__props": "15f23c38"
   },
-  "/blog/tags/security-1ea": {
+  "/blog/tags/security-47e": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
+      {
+        "content": "0010ff4c"
+      },
       {
         "content": "95bff33a"
       }
@@ -104,18 +130,22 @@
     },
     "content": "8f81c361"
   },
-  "/docs-e59": {
+  "/docs-7cb": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-22d": {
+  "/docs-397": {
     "__comp": "a7bd4aaa",
     "__props": "0058b4c6"
   },
-  "/docs-154": {
+  "/docs-106": {
     "__comp": "a94703ab"
+  },
+  "/docs/aws-security/access-analyzer-e05": {
+    "__comp": "17896441",
+    "content": "f28bdd07"
   },
   "/docs/aws-security/foundations-ee6": {
     "__comp": "17896441",

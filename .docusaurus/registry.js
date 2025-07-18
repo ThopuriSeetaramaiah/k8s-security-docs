@@ -1,4 +1,5 @@
 export default {
+  "0010ff4c": [() => import(/* webpackChunkName: "0010ff4c" */ "@site/blog/2025-07-25-security-newsletter-2.md?truncated=true"), "@site/blog/2025-07-25-security-newsletter-2.md?truncated=true", require.resolveWeak("@site/blog/2025-07-25-security-newsletter-2.md?truncated=true")],
   "0058b4c6": [() => import(/* webpackChunkName: "0058b4c6" */ "@generated/docusaurus-plugin-content-docs/default/p/docs-175.json"), "@generated/docusaurus-plugin-content-docs/default/p/docs-175.json", require.resolveWeak("@generated/docusaurus-plugin-content-docs/default/p/docs-175.json")],
   "01a85c17": [() => import(/* webpackChunkName: "01a85c17" */ "@theme/BlogTagsListPage"), "@theme/BlogTagsListPage", require.resolveWeak("@theme/BlogTagsListPage")],
   "0480b142": [() => import(/* webpackChunkName: "0480b142" */ "@site/docs/faq.md"), "@site/docs/faq.md", require.resolveWeak("@site/docs/faq.md")],
@@ -45,5 +46,7 @@ export default {
   "d8723a92": [() => import(/* webpackChunkName: "d8723a92" */ "@site/docs/best-practices/cluster-security.md"), "@site/docs/best-practices/cluster-security.md", require.resolveWeak("@site/docs/best-practices/cluster-security.md")],
   "e0a608db": [() => import(/* webpackChunkName: "e0a608db" */ "@site/docs/security-tools/kube-hunter.md"), "@site/docs/security-tools/kube-hunter.md", require.resolveWeak("@site/docs/security-tools/kube-hunter.md")],
   "ecaa74c1": [() => import(/* webpackChunkName: "ecaa74c1" */ "@site/docs/devops-security/intro.md"), "@site/docs/devops-security/intro.md", require.resolveWeak("@site/docs/devops-security/intro.md")],
+  "f28bdd07": [() => import(/* webpackChunkName: "f28bdd07" */ "@site/docs/aws-security/access-analyzer.md"), "@site/docs/aws-security/access-analyzer.md", require.resolveWeak("@site/docs/aws-security/access-analyzer.md")],
+  "f6df2fe6": [() => import(/* webpackChunkName: "f6df2fe6" */ "@site/blog/2025-07-25-security-newsletter-2.md"), "@site/blog/2025-07-25-security-newsletter-2.md", require.resolveWeak("@site/blog/2025-07-25-security-newsletter-2.md")],
   "f81c1134": [() => import(/* webpackChunkName: "f81c1134" */ "@generated/docusaurus-plugin-content-blog/default/p/blog-archive-f05.json"), "@generated/docusaurus-plugin-content-blog/default/p/blog-archive-f05.json", require.resolveWeak("@generated/docusaurus-plugin-content-blog/default/p/blog-archive-f05.json")],
   "f8453c58": [() => import(/* webpackChunkName: "f8453c58" */ "@site/docs/aws-security/iam-best-practices.md"), "@site/docs/aws-security/iam-best-practices.md", require.resolveWeak("@site/docs/aws-security/iam-best-practices.md")],};

@@ -4,7 +4,7 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '28c'),
+    component: ComponentCreator('/blog', 'd91'),
     exact: true
   },
   {
@@ -18,28 +18,33 @@ export default [
     exact: true
   },
   {
+    path: '/blog/security-newsletter-2',
+    component: ComponentCreator('/blog/security-newsletter-2', '97c'),
+    exact: true
+  },
+  {
     path: '/blog/tags',
     component: ComponentCreator('/blog/tags', '287'),
     exact: true
   },
   {
     path: '/blog/tags/aws',
-    component: ComponentCreator('/blog/tags/aws', '64c'),
+    component: ComponentCreator('/blog/tags/aws', 'd02'),
     exact: true
   },
   {
     path: '/blog/tags/kubernetes',
-    component: ComponentCreator('/blog/tags/kubernetes', '922'),
+    component: ComponentCreator('/blog/tags/kubernetes', '23e'),
     exact: true
   },
   {
     path: '/blog/tags/newsletter',
-    component: ComponentCreator('/blog/tags/newsletter', 'c83'),
+    component: ComponentCreator('/blog/tags/newsletter', '060'),
     exact: true
   },
   {
     path: '/blog/tags/security',
-    component: ComponentCreator('/blog/tags/security', '1ea'),
+    component: ComponentCreator('/blog/tags/security', '47e'),
     exact: true
   },
   {
@@ -54,16 +59,22 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'e59'),
+    component: ComponentCreator('/docs', '7cb'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '22d'),
+        component: ComponentCreator('/docs', '397'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '154'),
+            component: ComponentCreator('/docs', '106'),
             routes: [
+              {
+                path: '/docs/aws-security/access-analyzer',
+                component: ComponentCreator('/docs/aws-security/access-analyzer', 'e05'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/docs/aws-security/foundations',
                 component: ComponentCreator('/docs/aws-security/foundations', 'ee6'),

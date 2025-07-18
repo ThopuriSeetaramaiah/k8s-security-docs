@@ -17,8 +17,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "IAM Best Practices",
-    "permalink": "/docs/aws-security/iam-best-practices"
+    "title": "IAM Access Analyzer",
+    "permalink": "/docs/aws-security/access-analyzer"
   },
   "next": {
     "title": "Installation Guide",
