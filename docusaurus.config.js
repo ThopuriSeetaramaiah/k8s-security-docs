@@ -5,12 +5,12 @@ const {themes} = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Kubernetes Security Guide',
-  tagline: 'Comprehensive guide to securing your Kubernetes clusters',
+  title: 'AWS & Kubernetes Security Guide',
+  tagline: 'Comprehensive guide to securing your AWS, DevOps, and Kubernetes environments',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://techdevops.co.uk',
+  url: 'https://security.techdevops.co.uk',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -63,7 +63,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/k8s-security-social-card.jpg',
       navbar: {
-        title: 'K8s Security Guide',
+        title: 'AWS & K8s Security Guide',
         logo: {
           alt: 'Kubernetes Security Logo',
           src: 'img/logo.svg',

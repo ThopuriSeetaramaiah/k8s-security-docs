@@ -18,6 +18,22 @@ const sidebars = {
     'intro',
     {
       type: 'category',
+      label: 'AWS Security',
+      items: [
+        'aws-security/intro',
+        'aws-security/foundations',
+        'aws-security/iam-best-practices',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'DevOps Security',
+      items: [
+        'devops-security/intro',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Getting Started',
       items: ['getting-started/installation', 'getting-started/quick-start'],
     },
