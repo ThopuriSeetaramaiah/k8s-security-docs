@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkk8s_security_docs=self.webpackChunkk8s_security_docs||[]).push([[2634],{192:(s,c,e)=>{e.r(c),e.d(c,{default:()=>t});e(6540);var u=e(6347),r=e(4848);function t(){return(0,r.jsx)(u.rd,{to:"/docs"})}}}]);
