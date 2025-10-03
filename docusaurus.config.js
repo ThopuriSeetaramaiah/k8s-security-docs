@@ -78,7 +78,6 @@ const config = {
             label: 'Documentation',
           },
           {to: '/blog/', label: 'Blog', position: 'left'},
-          {to: '/newsletter/', label: 'Newsletter', position: 'left'},
           {
             href: 'https://github.com/ThopuriSeetaramaiah/k8s-security-docs',
             label: 'GitHub',
