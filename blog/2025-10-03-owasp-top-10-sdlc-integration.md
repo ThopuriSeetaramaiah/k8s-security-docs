@@ -1,7 +1,11 @@
 ---
 slug: owasp-top-10-sdlc-integration
 title: OWASP Top 10 2021 - Essential Security Guide for Developers and SDLC Integration
-authors: [seetaramaiah]
+authors:
+  name: Seetaramaiah Thopuri
+  title: Security Specialist
+  url: https://github.com/ThopuriSeetaramaiah
+  image_url: https://github.com/ThopuriSeetaramaiah.png
 tags: [owasp, security, sdlc, development, vulnerability, appsec]
 date: 2025-10-03
 ---
