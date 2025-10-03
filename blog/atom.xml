@@ -2,11 +2,233 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://security.techdevops.co.uk/blog</id>
     <title>AWS &amp; Kubernetes Security Guide Blog</title>
-    <updated>2025-07-25T00:00:00.000Z</updated>
+    <updated>2025-10-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://security.techdevops.co.uk/blog"/>
     <subtitle>AWS &amp; Kubernetes Security Guide Blog</subtitle>
     <icon>https://security.techdevops.co.uk/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[OWASP Top 10 2021 - Essential Security Guide for Developers and SDLC Integration]]></title>
+        <id>https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration</id>
+        <link href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration"/>
+        <updated>2025-10-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The OWASP Top 10 represents the most critical web application security risks that developers face today. Understanding and implementing these security measures throughout your Software Development Life Cycle (SDLC) is crucial for building secure applications.]]></summary>
+        <content type="html"><![CDATA[<p>The OWASP Top 10 represents the most critical web application security risks that developers face today. Understanding and implementing these security measures throughout your Software Development Life Cycle (SDLC) is crucial for building secure applications.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-owasp-top-10">What is OWASP Top 10?<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#what-is-owasp-top-10" class="hash-link" aria-label="Direct link to What is OWASP Top 10?" title="Direct link to What is OWASP Top 10?">​</a></h2>
+<p>The Open Web Application Security Project (OWASP) Top 10 is a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications, updated every 3-4 years based on real-world data and expert analysis.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="owasp-top-10-2021---the-critical-risks">OWASP Top 10 2021 - The Critical Risks<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#owasp-top-10-2021---the-critical-risks" class="hash-link" aria-label="Direct link to OWASP Top 10 2021 - The Critical Risks" title="Direct link to OWASP Top 10 2021 - The Critical Risks">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-a012021--broken-access-control">1. A01:2021 – Broken Access Control<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#1-a012021--broken-access-control" class="hash-link" aria-label="Direct link to 1. A01:2021 – Broken Access Control" title="Direct link to 1. A01:2021 – Broken Access Control">​</a></h3>
+<p><strong>Risk Level: Critical</strong></p>
+<p>Access control enforces policy such that users cannot act outside of their intended permissions.</p>
+<p><strong>Common Vulnerabilities:</strong></p>
+<ul>
+<li>Bypassing access control checks by modifying URLs</li>
+<li>Elevation of privilege attacks</li>
+<li>Metadata manipulation (JWT tokens, cookies)</li>
+<li>CORS misconfiguration</li>
+</ul>
+<p><strong>SDLC Integration:</strong></p>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Example: Secure API endpoint with proper access control</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">@app.route('/admin/users')</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">@require_role('admin')</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">def get_users()</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    return jsonify(users)</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-a022021--cryptographic-failures">2. A02:2021 – Cryptographic Failures<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#2-a022021--cryptographic-failures" class="hash-link" aria-label="Direct link to 2. A02:2021 – Cryptographic Failures" title="Direct link to 2. A02:2021 – Cryptographic Failures">​</a></h3>
+<p><strong>Risk Level: High</strong></p>
+<p>Previously known as "Sensitive Data Exposure," this category focuses on failures related to cryptography.</p>
+<p><strong>Common Issues:</strong></p>
+<ul>
+<li>Transmitting data in clear text (HTTP, SMTP, FTP)</li>
+<li>Using old or weak cryptographic algorithms</li>
+<li>Default crypto keys or weak keys</li>
+<li>Missing encryption for sensitive data</li>
+</ul>
+<p><strong>Implementation Example:</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Secure password hashing</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> bcrypt</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">hash_password</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">password</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> bcrypt</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">hashpw</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">password</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">encode</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'utf-8'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> bcrypt</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">gensalt</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">verify_password</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">password</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> hashed</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> bcrypt</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">checkpw</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">password</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">encode</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'utf-8'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> hashed</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-a032021--injection">3. A03:2021 – Injection<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#3-a032021--injection" class="hash-link" aria-label="Direct link to 3. A03:2021 – Injection" title="Direct link to 3. A03:2021 – Injection">​</a></h3>
+<p><strong>Risk Level: High</strong></p>
+<p>Injection flaws occur when untrusted data is sent to an interpreter as part of a command or query.</p>
+<p><strong>Types of Injection:</strong></p>
+<ul>
+<li>SQL Injection</li>
+<li>NoSQL Injection</li>
+<li>OS Command Injection</li>
+<li>LDAP Injection</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Secure SQL query using parameterized statements</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cursor</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">execute</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"SELECT * FROM users WHERE id = %s"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">user_id</span><span class="token punctuation" style="color:#393A34">,</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-a042021--insecure-design">4. A04:2021 – Insecure Design<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#4-a042021--insecure-design" class="hash-link" aria-label="Direct link to 4. A04:2021 – Insecure Design" title="Direct link to 4. A04:2021 – Insecure Design">​</a></h3>
+<p><strong>Risk Level: High</strong></p>
+<p>A new category focusing on risks related to design flaws and architectural weaknesses.</p>
+<p><strong>Key Principles:</strong></p>
+<ul>
+<li>Secure design patterns</li>
+<li>Threat modeling</li>
+<li>Security requirements gathering</li>
+<li>Secure architecture reviews</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-a052021--security-misconfiguration">5. A05:2021 – Security Misconfiguration<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#5-a052021--security-misconfiguration" class="hash-link" aria-label="Direct link to 5. A05:2021 – Security Misconfiguration" title="Direct link to 5. A05:2021 – Security Misconfiguration">​</a></h3>
+<p><strong>Risk Level: Medium</strong></p>
+<p>Applications might be vulnerable if they have insecure default configurations, incomplete configurations, or misconfigured HTTP headers.</p>
+<p><strong>Common Misconfigurations:</strong></p>
+<ul>
+<li>Default accounts and passwords</li>
+<li>Unnecessary features enabled</li>
+<li>Missing security headers</li>
+<li>Verbose error messages revealing sensitive information</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-a062021--vulnerable-and-outdated-components">6. A06:2021 – Vulnerable and Outdated Components<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#6-a062021--vulnerable-and-outdated-components" class="hash-link" aria-label="Direct link to 6. A06:2021 – Vulnerable and Outdated Components" title="Direct link to 6. A06:2021 – Vulnerable and Outdated Components">​</a></h3>
+<p><strong>Risk Level: Medium</strong></p>
+<p>Using components with known vulnerabilities can compromise application security.</p>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Regular dependency scanning</li>
+<li>Automated vulnerability monitoring</li>
+<li>Timely updates and patches</li>
+</ul>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Example: npm audit for Node.js projects</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">npm</span><span class="token plain"> audit</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">npm</span><span class="token plain"> audit fix</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-a072021--identification-and-authentication-failures">7. A07:2021 – Identification and Authentication Failures<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#7-a072021--identification-and-authentication-failures" class="hash-link" aria-label="Direct link to 7. A07:2021 – Identification and Authentication Failures" title="Direct link to 7. A07:2021 – Identification and Authentication Failures">​</a></h3>
+<p><strong>Risk Level: Medium</strong></p>
+<p>Previously "Broken Authentication," this includes weaknesses in authentication and session management.</p>
+<p><strong>Common Weaknesses:</strong></p>
+<ul>
+<li>Weak password policies</li>
+<li>Credential stuffing attacks</li>
+<li>Session fixation</li>
+<li>Missing multi-factor authentication</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-a082021--software-and-data-integrity-failures">8. A08:2021 – Software and Data Integrity Failures<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#8-a082021--software-and-data-integrity-failures" class="hash-link" aria-label="Direct link to 8. A08:2021 – Software and Data Integrity Failures" title="Direct link to 8. A08:2021 – Software and Data Integrity Failures">​</a></h3>
+<p><strong>Risk Level: Medium</strong></p>
+<p>A new category focusing on software updates, critical data, and CI/CD pipelines without verifying integrity.</p>
+<p><strong>Key Areas:</strong></p>
+<ul>
+<li>Unsigned software updates</li>
+<li>Insecure CI/CD pipelines</li>
+<li>Auto-update functionality without integrity verification</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-a092021--security-logging-and-monitoring-failures">9. A09:2021 – Security Logging and Monitoring Failures<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#9-a092021--security-logging-and-monitoring-failures" class="hash-link" aria-label="Direct link to 9. A09:2021 – Security Logging and Monitoring Failures" title="Direct link to 9. A09:2021 – Security Logging and Monitoring Failures">​</a></h3>
+<p><strong>Risk Level: Low</strong></p>
+<p>Insufficient logging and monitoring can prevent or delay the detection of security breaches.</p>
+<p><strong>Implementation:</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> logging</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Configure security logging</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">logging</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">basicConfig</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    level</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">logging</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">INFO</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token builtin">format</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">'%(asctime)s - %(name)s - %(levelname)s - %(message)s'</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">log_security_event</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">event_type</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> user_id</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> details</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    logging</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">warning</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string-interpolation string" style="color:#e3116c">f"Security Event: </span><span class="token string-interpolation interpolation punctuation" style="color:#393A34">{</span><span class="token string-interpolation interpolation">event_type</span><span class="token string-interpolation interpolation punctuation" style="color:#393A34">}</span><span class="token string-interpolation string" style="color:#e3116c"> - User: </span><span class="token string-interpolation interpolation punctuation" style="color:#393A34">{</span><span class="token string-interpolation interpolation">user_id</span><span class="token string-interpolation interpolation punctuation" style="color:#393A34">}</span><span class="token string-interpolation string" style="color:#e3116c"> - </span><span class="token string-interpolation interpolation punctuation" style="color:#393A34">{</span><span class="token string-interpolation interpolation">details</span><span class="token string-interpolation interpolation punctuation" style="color:#393A34">}</span><span class="token string-interpolation string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-a102021--server-side-request-forgery-ssrf">10. A10:2021 – Server-Side Request Forgery (SSRF)<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#10-a102021--server-side-request-forgery-ssrf" class="hash-link" aria-label="Direct link to 10. A10:2021 – Server-Side Request Forgery (SSRF)" title="Direct link to 10. A10:2021 – Server-Side Request Forgery (SSRF)">​</a></h3>
+<p><strong>Risk Level: Medium</strong></p>
+<p>SSRF flaws occur when a web application fetches a remote resource without validating the user-supplied URL.</p>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Input validation and sanitization</li>
+<li>Network segmentation</li>
+<li>URL allowlisting</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="integrating-owasp-top-10-into-sdlc">Integrating OWASP Top 10 into SDLC<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#integrating-owasp-top-10-into-sdlc" class="hash-link" aria-label="Direct link to Integrating OWASP Top 10 into SDLC" title="Direct link to Integrating OWASP Top 10 into SDLC">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-requirements-phase">1. Requirements Phase<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#1-requirements-phase" class="hash-link" aria-label="Direct link to 1. Requirements Phase" title="Direct link to 1. Requirements Phase">​</a></h3>
+<ul>
+<li><strong>Security Requirements:</strong> Define security requirements based on OWASP Top 10</li>
+<li><strong>Threat Modeling:</strong> Identify potential threats and attack vectors</li>
+<li><strong>Risk Assessment:</strong> Evaluate and prioritize security risks</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-design-phase">2. Design Phase<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#2-design-phase" class="hash-link" aria-label="Direct link to 2. Design Phase" title="Direct link to 2. Design Phase">​</a></h3>
+<ul>
+<li><strong>Secure Architecture:</strong> Design with security principles in mind</li>
+<li><strong>Security Controls:</strong> Plan implementation of security controls</li>
+<li><strong>Data Flow Analysis:</strong> Map data flows and identify sensitive data handling</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-development-phase">3. Development Phase<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#3-development-phase" class="hash-link" aria-label="Direct link to 3. Development Phase" title="Direct link to 3. Development Phase">​</a></h3>
+<ul>
+<li><strong>Secure Coding Standards:</strong> Follow OWASP secure coding practices</li>
+<li><strong>Code Reviews:</strong> Implement security-focused code reviews</li>
+<li><strong>Static Analysis:</strong> Use SAST tools to identify vulnerabilities</li>
+</ul>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Example: GitHub Actions security workflow</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> Security Scan</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">on</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain">push</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> pull_request</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">jobs</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">security</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">runs-on</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> ubuntu</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">latest</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">steps</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">uses</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> actions/checkout@v2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> Run OWASP Dependency Check</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">uses</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> dependency</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">check/Dependency</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">Check_Action@main</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-testing-phase">4. Testing Phase<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#4-testing-phase" class="hash-link" aria-label="Direct link to 4. Testing Phase" title="Direct link to 4. Testing Phase">​</a></h3>
+<ul>
+<li><strong>DAST Scanning:</strong> Dynamic application security testing</li>
+<li><strong>Penetration Testing:</strong> Simulate real-world attacks</li>
+<li><strong>Vulnerability Assessment:</strong> Comprehensive security testing</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-deployment-phase">5. Deployment Phase<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#5-deployment-phase" class="hash-link" aria-label="Direct link to 5. Deployment Phase" title="Direct link to 5. Deployment Phase">​</a></h3>
+<ul>
+<li><strong>Security Configuration:</strong> Ensure secure deployment configurations</li>
+<li><strong>Environment Hardening:</strong> Secure the deployment environment</li>
+<li><strong>Monitoring Setup:</strong> Implement security monitoring and logging</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-maintenance-phase">6. Maintenance Phase<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#6-maintenance-phase" class="hash-link" aria-label="Direct link to 6. Maintenance Phase" title="Direct link to 6. Maintenance Phase">​</a></h3>
+<ul>
+<li><strong>Regular Updates:</strong> Keep dependencies and components updated</li>
+<li><strong>Continuous Monitoring:</strong> Monitor for new vulnerabilities</li>
+<li><strong>Incident Response:</strong> Have a plan for security incidents</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tools-and-resources-for-implementation">Tools and Resources for Implementation<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#tools-and-resources-for-implementation" class="hash-link" aria-label="Direct link to Tools and Resources for Implementation" title="Direct link to Tools and Resources for Implementation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="static-analysis-tools-sast">Static Analysis Tools (SAST)<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#static-analysis-tools-sast" class="hash-link" aria-label="Direct link to Static Analysis Tools (SAST)" title="Direct link to Static Analysis Tools (SAST)">​</a></h3>
+<ul>
+<li><strong>SonarQube:</strong> Code quality and security analysis</li>
+<li><strong>Checkmarx:</strong> Static application security testing</li>
+<li><strong>Veracode:</strong> Comprehensive security testing platform</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dynamic-analysis-tools-dast">Dynamic Analysis Tools (DAST)<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#dynamic-analysis-tools-dast" class="hash-link" aria-label="Direct link to Dynamic Analysis Tools (DAST)" title="Direct link to Dynamic Analysis Tools (DAST)">​</a></h3>
+<ul>
+<li><strong>OWASP ZAP:</strong> Free security testing proxy</li>
+<li><strong>Burp Suite:</strong> Web application security testing</li>
+<li><strong>Nessus:</strong> Vulnerability scanner</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dependency-scanning">Dependency Scanning<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#dependency-scanning" class="hash-link" aria-label="Direct link to Dependency Scanning" title="Direct link to Dependency Scanning">​</a></h3>
+<ul>
+<li><strong>OWASP Dependency Check:</strong> Free dependency vulnerability scanner</li>
+<li><strong>Snyk:</strong> Developer-first security platform</li>
+<li><strong>WhiteSource:</strong> Open source security and license compliance</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="container-security">Container Security<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#container-security" class="hash-link" aria-label="Direct link to Container Security" title="Direct link to Container Security">​</a></h3>
+<div class="language-dockerfile codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-dockerfile codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Example: Secure Dockerfile practices</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">FROM node:16-alpine</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">RUN addgroup -g 1001 -S nodejs</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">RUN adduser -S nextjs -u 1001</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">USER nextjs</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">COPY --chown=nextjs:nodejs . .</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-for-developers">Best Practices for Developers<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#best-practices-for-developers" class="hash-link" aria-label="Direct link to Best Practices for Developers" title="Direct link to Best Practices for Developers">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-security-by-design">1. Security by Design<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#1-security-by-design" class="hash-link" aria-label="Direct link to 1. Security by Design" title="Direct link to 1. Security by Design">​</a></h3>
+<ul>
+<li>Consider security from the beginning of development</li>
+<li>Use established security frameworks and libraries</li>
+<li>Follow the principle of least privilege</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-input-validation">2. Input Validation<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#2-input-validation" class="hash-link" aria-label="Direct link to 2. Input Validation" title="Direct link to 2. Input Validation">​</a></h3>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Example: Input validation</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> re</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">validate_email</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">email</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    pattern </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> re</span><span class="token punctuation" style="color:#393A34">.</span><span class="token keyword" style="color:#00009f">match</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">pattern</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> email</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">is</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">not</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-secure-configuration-management">3. Secure Configuration Management<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#3-secure-configuration-management" class="hash-link" aria-label="Direct link to 3. Secure Configuration Management" title="Direct link to 3. Secure Configuration Management">​</a></h3>
+<ul>
+<li>Use environment variables for sensitive configuration</li>
+<li>Implement configuration validation</li>
+<li>Regular security configuration reviews</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-continuous-security-testing">4. Continuous Security Testing<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#4-continuous-security-testing" class="hash-link" aria-label="Direct link to 4. Continuous Security Testing" title="Direct link to 4. Continuous Security Testing">​</a></h3>
+<ul>
+<li>Integrate security testing into CI/CD pipelines</li>
+<li>Automate vulnerability scanning</li>
+<li>Regular security assessments</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="measuring-success">Measuring Success<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#measuring-success" class="hash-link" aria-label="Direct link to Measuring Success" title="Direct link to Measuring Success">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-performance-indicators-kpis">Key Performance Indicators (KPIs)<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#key-performance-indicators-kpis" class="hash-link" aria-label="Direct link to Key Performance Indicators (KPIs)" title="Direct link to Key Performance Indicators (KPIs)">​</a></h3>
+<ul>
+<li><strong>Vulnerability Detection Rate:</strong> Number of vulnerabilities found per release</li>
+<li><strong>Mean Time to Remediation (MTTR):</strong> Time taken to fix security issues</li>
+<li><strong>Security Test Coverage:</strong> Percentage of code covered by security tests</li>
+<li><strong>Compliance Score:</strong> Adherence to OWASP Top 10 guidelines</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="metrics-dashboard">Metrics Dashboard<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#metrics-dashboard" class="hash-link" aria-label="Direct link to Metrics Dashboard" title="Direct link to Metrics Dashboard">​</a></h3>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Example: Security metrics tracking</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">security_metrics</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">vulnerabilities_found</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">15</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">vulnerabilities_fixed</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">12</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">mttr_days</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3.5</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">test_coverage</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> 85%</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">owasp_compliance</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> 90%</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>Integrating OWASP Top 10 into your SDLC is not just about compliance—it's about building a security-first culture in your development team. By addressing these critical security risks throughout the development process, you can significantly reduce the attack surface of your applications and protect your users' data.</p>
+<p>Remember, security is not a one-time activity but an ongoing process that requires continuous attention, learning, and improvement. Start with the basics, implement gradually, and always stay updated with the latest security trends and threats.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-resources">Additional Resources<a href="https://security.techdevops.co.uk/blog/owasp-top-10-sdlc-integration#additional-resources" class="hash-link" aria-label="Direct link to Additional Resources" title="Direct link to Additional Resources">​</a></h2>
+<ul>
+<li><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">OWASP Top 10 Official Documentation</a></li>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/" target="_blank" rel="noopener noreferrer">OWASP Application Security Verification Standard (ASVS)</a></li>
+<li><a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/" target="_blank" rel="noopener noreferrer">OWASP Secure Coding Practices</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener noreferrer">OWASP Testing Guide</a></li>
+</ul>
+<hr>
+<p><em>Stay secure, code responsibly! 🔒</em></p>]]></content>
+        <author>
+            <name>Seetaramaiah Thopuri</name>
+            <uri>https://github.com/ThopuriSeetaramaiah</uri>
+        </author>
+        <category label="owasp" term="owasp"/>
+        <category label="security" term="security"/>
+        <category label="sdlc" term="sdlc"/>
+        <category label="development" term="development"/>
+        <category label="vulnerability" term="vulnerability"/>
+        <category label="appsec" term="appsec"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Security Newsletter - Week of July 25, 2025]]></title>
         <id>https://security.techdevops.co.uk/blog/security-newsletter-2</id>

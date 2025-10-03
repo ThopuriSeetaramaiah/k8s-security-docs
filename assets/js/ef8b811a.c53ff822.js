@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkk8s_security_docs=self.webpackChunkk8s_security_docs||[]).push([[8947],{6600:a=>{a.exports=JSON.parse('{"authors":[{"name":"Seetaramaiah Thopuri","title":"Security Specialist","url":"https://github.com/ThopuriSeetaramaiah","imageURL":"https://github.com/ThopuriSeetaramaiah.png","key":"seetaramaiah","page":null,"count":0}]}')}}]);
